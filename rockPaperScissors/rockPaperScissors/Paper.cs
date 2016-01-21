@@ -10,7 +10,7 @@ namespace rockPaperScissors
     {
         public enum SPR { scissors, paper, rock, lizard, spock };
 
-        public void PaperWinCondition()
+        public void PaperWinCondition(string input)
         {
             var value = SPR.paper;
             switch (value)

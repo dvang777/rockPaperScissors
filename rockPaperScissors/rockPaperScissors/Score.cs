@@ -11,7 +11,6 @@ namespace rockPaperScissors
         int UScore = 0;
         int CScore = 0;
         bool? isVictorious;
-
         public Score()
         {
             if (isVictorious == true)

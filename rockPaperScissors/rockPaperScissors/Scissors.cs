@@ -10,8 +10,7 @@ namespace rockPaperScissors
     public class Scissors
     {
         public enum SPR { scissors, paper, rock, lizard, spock };
-
-        public void ScissorsWinCondition()
+        public void ScissorsWinCondition(string input)
         {
             var value = SPR.scissors;
             switch (value)

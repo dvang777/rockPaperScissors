@@ -9,7 +9,7 @@ namespace rockPaperScissors
     public class Lizard
     {
         public enum SPR { scissors, paper, rock, lizard, spock };
-        public void LizardWinCondition()
+        public void LizardWinCondition(string input)
         {
             var value = SPR.lizard;
             switch (value)
