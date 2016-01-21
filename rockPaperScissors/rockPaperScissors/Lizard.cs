@@ -9,25 +9,25 @@ namespace rockPaperScissors
     public class Lizard
     {
         public enum SPR { scissors, paper, rock, lizard, spock };
-
-        public void LizardWinCondition(int rng)
+        public void LizardWinCondition()
         {
-            switch (rng)
+            var value = SPR.lizard;
+            switch (value)
             {
-                case 0:
-                    Console.WriteLine("I chose {0}, I win.", SPR.scissors);
+                case SPR.scissors:
+                    Console.WriteLine("I chose Lizard, I lose.");
                     break;
-                case 1:
-                    Console.WriteLine("I chose {0}, I lose.", SPR.paper);
+                case SPR.paper:
+                    Console.WriteLine("I chose Lizard, I win.");
                     break;
-                case 2:
-                    Console.WriteLine("I chose {0}, I win.", SPR.rock);
+                case SPR.rock:
+                    Console.WriteLine("I chose Lizard, I lose.");
                     break;
-                case 3:
-                    Console.WriteLine("I chose {0}, we draw.", SPR.lizard);
+                case SPR.lizard:
+                    Console.WriteLine("I chose Lizard, we draw.");
                     break;
                 default:
-                    Console.WriteLine("I chose {0}, I lose.", SPR.spock);
+                    Console.WriteLine("I chose Lizard, I win.");
                     break;
             }
         }

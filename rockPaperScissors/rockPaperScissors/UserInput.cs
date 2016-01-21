@@ -8,13 +8,9 @@ namespace rockPaperScissors
 {
     public class UserInput
     {
-       
         public UserInput()
         {
-            Console.Write("Rock, Paper, Scissors, Lizard, Spock");
            Console.ReadLine();
         }
-
-
     }
 }

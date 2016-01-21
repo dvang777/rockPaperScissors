@@ -16,9 +16,6 @@ namespace rockPaperScissors
             {
                 Console.WriteLine(playersArray[i]);
             }
-
-
-
         }
     }
 }
