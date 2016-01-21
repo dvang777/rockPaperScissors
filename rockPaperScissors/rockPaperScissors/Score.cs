@@ -8,8 +8,8 @@ namespace rockPaperScissors
 {
     class Score
     {
-        int UScore;
-        int CScore;
+        int UScore = 0;
+        int CScore = 0;
         bool? isVictorious;
 
         public Score()
