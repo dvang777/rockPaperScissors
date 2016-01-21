@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    class Players
+    public class Players
     {
-        string [] players;
+        string [] playersArray;
+
+        public Players()
+        {
+            for (int i = 0; i < playersArray.length; i++)
+            {
+                Console.WriteLine(playersArray[i]);
+            }
+
+
+
+        }
     }
 }

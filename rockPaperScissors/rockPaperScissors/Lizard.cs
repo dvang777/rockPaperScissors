@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    class Lizard
+    public class Lizard
     {
         public enum SPR { scissors, paper, rock, lizard, spock };
 
