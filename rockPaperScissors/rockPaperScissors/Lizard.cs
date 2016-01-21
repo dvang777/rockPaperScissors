@@ -31,4 +31,5 @@ namespace rockPaperScissors
                     break;
             }
         }
+    }
 }
