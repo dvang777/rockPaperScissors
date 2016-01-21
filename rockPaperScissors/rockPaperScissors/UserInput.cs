@@ -9,10 +9,10 @@ namespace rockPaperScissors
     public class UserInput
     {
        
-        public UserInput(string input)
+        public UserInput()
         {
-            Console.Write("Rock,Paper or Scissors");
-            input = Console.ReadLine();
+            Console.Write("Rock, Paper, Scissors, Lizard, Spock");
+           Console.ReadLine();
         }
 
 

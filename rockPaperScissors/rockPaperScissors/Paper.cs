@@ -10,7 +10,7 @@ namespace rockPaperScissors
     {
         public enum SPR { scissors, paper, rock, lizard, spock };
 
-        public void winCondition(int rng)
+        public void PaperWinCondition(int rng)
         {
             switch (rng)
             {
