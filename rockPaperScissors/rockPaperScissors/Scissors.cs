@@ -13,17 +13,17 @@ namespace rockPaperScissors
 
     public void winCondition(int value)
         {
-            if(value == 1)
+            switch (value)
             {
-                Console.WriteLine("Chose Scissors, we draw.");
-            }
-            else if(value == 2)
-            {
-                Console.WriteLine("Chose Paper, I win.");
-            }
-            else if(value == 3)
-            {
-                Console.WriteLine("Chose Rock, I lose.");
+                case 1:
+                    Console.WriteLine("Chose Scissors, we draw.");
+                    break;
+                case 2:
+                    Console.WriteLine("Chose Paper, I win.");
+                    break;
+                default:
+                    Console.WriteLine("Chose Rock, I lose.");
+                    break;
             }
         }
     }
