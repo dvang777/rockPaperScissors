@@ -7,7 +7,7 @@ using System.IO;
 
 namespace rockPaperScissors
 {
-    class FileRead
+    public class FileRead
     {
         TextReader tr = new StreamReader("score.txt");
     }

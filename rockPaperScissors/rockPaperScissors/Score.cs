@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    class Score
+    public class Score
     {
         int UScore = 0;
         int CScore = 0;
