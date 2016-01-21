@@ -9,24 +9,21 @@ namespace rockPaperScissors
     
     public class Scissors
     {
-        int scissors;
-        int paper;
-        int rock;
+        
 
-    public void winCondition(int scissors, int paper, int rock)
+    public void winCondition(int value)
         {
-            if (this.scissors == this.scissors)
+            if(value == 1)
             {
-                Console.WriteLine("Draw");
-
+                Console.WriteLine("Chose Scissors, we draw.");
             }
-            else if (this.scissors > this.paper)
+            else if(value == 2)
             {
-                Console.WriteLine("Victory");
+                Console.WriteLine("Chose Paper, I win.");
             }
-            else if(this.scissors <this.rock)
+            else if(value == 3)
             {
-                Console.WriteLine("Loss");
+                Console.WriteLine("Chose Rock, I lose.");
             }
         }
     }

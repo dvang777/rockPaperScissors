@@ -8,24 +8,20 @@ namespace rockPaperScissors
 {
     class Rock
     {
-        int scissors;
-        int paper;
-        int rock;
 
-        public void winCondition(int scissors, int paper, int rock)
+        public void winCondition(int value)
         {
-            if (this.rock == this.rock)
+            if (value == 1)
             {
-                Console.WriteLine("Draw");
-
+                Console.WriteLine("Chose Scissors, I win.");
             }
-            else if (this.rock > this.scissors)
+            else if (value == 2)
             {
-                Console.WriteLine("Victory");
+                Console.WriteLine("Chose Paper, I lose.");
             }
-            else if (this.rock < this.paper)
+            else if (value == 3)
             {
-                Console.WriteLine("Loss");
+                Console.WriteLine("Chose Rock, we draw.");
             }
         }
     }
