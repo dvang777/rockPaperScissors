@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    public class Rock
+    class Spock
     {
-        public enum SPR {scissors, paper, rock, lizard, spock};
+        public enum SPR { scissors, paper, rock, lizard, spock };
 
         public void winCondition(int rng)
         {
@@ -21,15 +21,14 @@ namespace rockPaperScissors
                     Console.WriteLine("I chose {0}, I win.", SPR.paper);
                     break;
                 case 2:
-                    Console.WriteLine("I chose {0}, we draw.", SPR.rock);
+                    Console.WriteLine("I chose {0}, I lose.", SPR.rock);
                     break;
                 case 3:
                     Console.WriteLine("I chose {0}, I win.", SPR.lizard);
                     break;
                 default:
-                    Console.WriteLine("I chose {0}, I lose.", SPR.spock);
+                    Console.WriteLine("I chose {0}, we draw.", SPR.spock);
                     break;
             }
         }
-    }
 }

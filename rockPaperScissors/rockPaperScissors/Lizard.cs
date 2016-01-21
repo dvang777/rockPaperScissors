@@ -6,30 +6,29 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    public class Rock
+    class Lizard
     {
-        public enum SPR {scissors, paper, rock, lizard, spock};
+        public enum SPR { scissors, paper, rock, lizard, spock };
 
         public void winCondition(int rng)
         {
             switch (rng)
             {
                 case 0:
-                    Console.WriteLine("I chose {0}, I lose.", SPR.scissors);
+                    Console.WriteLine("I chose {0}, I win.", SPR.scissors);
                     break;
                 case 1:
-                    Console.WriteLine("I chose {0}, I win.", SPR.paper);
+                    Console.WriteLine("I chose {0}, I lose.", SPR.paper);
                     break;
                 case 2:
-                    Console.WriteLine("I chose {0}, we draw.", SPR.rock);
+                    Console.WriteLine("I chose {0}, I win.", SPR.rock);
                     break;
                 case 3:
-                    Console.WriteLine("I chose {0}, I win.", SPR.lizard);
+                    Console.WriteLine("I chose {0}, we draw.", SPR.lizard);
                     break;
                 default:
                     Console.WriteLine("I chose {0}, I lose.", SPR.spock);
                     break;
             }
         }
-    }
 }
