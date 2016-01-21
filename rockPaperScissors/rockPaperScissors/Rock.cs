@@ -8,14 +8,11 @@ namespace rockPaperScissors
 {
     public class Rock
     {
-
-
         public enum SPR {scissors, paper, rock, lizard, spock};
 
-        private SPR value;
-
         private void RockWinCondition()
-        { 
+        {
+            var value = SPR.rock;
             switch (value)
             {
                 case SPR.scissors:

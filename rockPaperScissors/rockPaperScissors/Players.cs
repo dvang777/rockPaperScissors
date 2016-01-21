@@ -10,9 +10,9 @@ namespace rockPaperScissors
     {
         string [] playersArray;
 
-        public Players()
+        public Players(string playerInput)
         {
-            for (int i = 0; i < playersArray.length; i++)
+            for (int i = 0; i < playersArray.Length; i++)
             {
                 Console.WriteLine(playersArray[i]);
             }
