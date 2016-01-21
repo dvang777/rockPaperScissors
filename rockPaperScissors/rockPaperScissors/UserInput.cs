@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    public class RandomNumber
+    public class UserInput
     {
-        Random rng = new Random();
-        public int GetRandomInt(int min, int max)
+       
+        public UserInput(string input)
         {
-            return rng.Next(min, max);
+            Console.Write("Rock,Paper or Scissors");
+            input = Console.ReadLine();
         }
+
+
     }
 }

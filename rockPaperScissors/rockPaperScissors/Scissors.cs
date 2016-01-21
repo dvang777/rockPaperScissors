@@ -13,7 +13,7 @@ namespace rockPaperScissors
         int paper;
         int rock;
 
-    public void winCondition()
+    public void winCondition(int scissors, int paper, int rock)
         {
             if (this.scissors == this.scissors)
             {

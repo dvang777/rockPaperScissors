@@ -49,6 +49,8 @@
     <Compile Include="RandomNumber.cs" />
     <Compile Include="Rock.cs" />
     <Compile Include="Scissors.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="UserInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
