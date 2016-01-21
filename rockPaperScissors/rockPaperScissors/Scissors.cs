@@ -9,22 +9,23 @@ namespace rockPaperScissors
     
     public class Scissors
     {
-        
+        public enum SPR { scissors, paper, rock };
 
-    public void winCondition(int value)
+        public void winCondition(int rng)
         {
-            switch (value)
+            switch (rng)
             {
-                case 1:
-                    Console.WriteLine("Chose Scissors, we draw.");
+                case 0:
+                    Console.WriteLine("I chose {0}, we draw.", SPR.scissors);
                     break;
-                case 2:
-                    Console.WriteLine("Chose Paper, I win.");
+                case 1:
+                    Console.WriteLine("I chose {0}, I lose.", SPR.paper);
                     break;
                 default:
-                    Console.WriteLine("Chose Rock, I lose.");
+                    Console.WriteLine("I chose {0}, I win.", SPR.rock);
                     break;
             }
         }
+    }
     }
 }
