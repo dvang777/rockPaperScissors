@@ -6,28 +6,32 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    public class Spock
+    public class Spock : CheckSelection
     {
-        public enum SPR { scissors, paper, rock, lizard, spock };
-        public void SpockWinCondition(string input)
+        string playerChoice = "Spock";
+        int spock = 4;
+
+        public void WinLoss(int player1choice, int player2choice)
         {
-            var value = SPR.spock;
-            switch (value)
+            int winLoss;
+
+            winLoss = (5 + player1choice - player2choice) % 5;
+            switch (winLoss)
             {
-                case SPR.scissors:
-                    Console.WriteLine("I chose Spock, I win.");
+                case 1:
+                    Console.WriteLine("Rock wins, Player 1 wins!");
                     break;
-                case SPR.paper:
-                    Console.WriteLine("I chose Spock, I lose.");
+                case 2:
+                    Console.WriteLine("Rock loss, Player 2 wins!");
                     break;
-                case SPR.rock:
-                    Console.WriteLine("I chose Spock, I win.");
+                case 3:
+                    Console.WriteLine("Rock wins, Player 1 wins!");
                     break;
-                case SPR.lizard:
-                    Console.WriteLine("I chose Spock, I lose.");
+                case 4:
+                    Console.WriteLine("Rock loss, Player 2 wins!");
                     break;
                 default:
-                    Console.WriteLine("I chose Spock, we draw.");
+                    Console.WriteLine("It's a draw.");
                     break;
             }
         }

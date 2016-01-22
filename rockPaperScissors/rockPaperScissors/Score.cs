@@ -8,23 +8,7 @@ namespace rockPaperScissors
 {
     public class Score
     {
-        int UScore = 0;
-        int CScore = 0;
-        bool? isVictorious;
-        public Score()
-        {
-            if (isVictorious == true)
-            {
-                UScore = UScore + 1;
-            }
-            else if (isVictorious == false)
-            {
-                CScore = CScore + 1;
-            }
-            else
-            {
-                Console.WriteLine("Draw");
-            }
-        }
+        int player1score = 0;
+        int player2score = 0;
     }
 }

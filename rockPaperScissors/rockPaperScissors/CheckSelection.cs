@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    public class Lizard : CheckSelection
+    public abstract class CheckSelection
     {
-        string playerChoice = "Lizard";
-        int lizard = 3;
-
-        public void WinLoss(int player1choice, int player2choice)
+        int player1choice;
+        int player2choice;
+        public void WinLoss()
         {
             int winLoss;
 

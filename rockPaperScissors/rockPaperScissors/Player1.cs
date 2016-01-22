@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace rockPaperScissors
 {
-    public class Program
+    public class Player1
     {
-        static void Main(string[] args)
+        public Player1()
         {
-            Console.Write( "Enter object number:");
-            string player2choice = Console.ReadLine();
+            string name;
+        }
+
+        public void player1Choice()
+        {
+            Console.Write("Enter object number:");
+            string player1choice = Console.ReadLine();
             int number;
-            if(Int32.TryParse(player2choice, out number))
+            if (Int32.TryParse(player1choice, out number))
             {
                 switch (number)
                 {
@@ -23,12 +28,17 @@ namespace rockPaperScissors
                     case 1:
                         Console.WriteLine("Paper");
                         break;
-                    default:
+                    case 2:
                         Console.WriteLine("Scissors");
                         break;
-
-                    
+                    case 3:
+                        Console.WriteLine("Lizard");
+                        break;
+                    default:
+                        Console.WriteLine("Spock");
+                        break;
                 }
+
             }
         }
     }

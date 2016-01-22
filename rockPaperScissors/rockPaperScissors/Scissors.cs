@@ -7,28 +7,32 @@ using System.Threading.Tasks;
 namespace rockPaperScissors
 {
     
-    public class Scissors
+    public class Scissors : CheckSelection
     {
-        public enum SPR { scissors, paper, rock, lizard, spock };
-        public void ScissorsWinCondition(string input)
+        string playerChoice = "Scissors";
+        int scissors = 2;
+
+        public void WinLoss(int player1choice, int player2choice)
         {
-            var value = SPR.scissors;
-            switch (value)
+            int winLoss;
+
+            winLoss = (5 + player1choice - player2choice) % 5;
+            switch (winLoss)
             {
-                case SPR.scissors:
-                    Console.WriteLine("I chose Scissors, we draw.");
+                case 1:
+                    Console.WriteLine("Rock wins, Player 1 wins!");
                     break;
-                case SPR.paper:
-                    Console.WriteLine("I chose Scissors, I win.");
+                case 2:
+                    Console.WriteLine("Rock loss, Player 2 wins!");
                     break;
-                case SPR.rock:
-                    Console.WriteLine("I chose Scissors, I lose.");
+                case 3:
+                    Console.WriteLine("Rock wins, Player 1 wins!");
                     break;
-                case SPR.lizard:
-                    Console.WriteLine("I chose Scissors, I win.");
+                case 4:
+                    Console.WriteLine("Rock loss, Player 2 wins!");
                     break;
                 default:
-                    Console.WriteLine("I chose Scissors, I lose.");
+                    Console.WriteLine("It's a draw.");
                     break;
             }
         }
