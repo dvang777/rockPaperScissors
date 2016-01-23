@@ -12,12 +12,12 @@ namespace rockPaperScissors
         {
             string name = Console.ReadLine();
         }
-        public void player2Choice(string name)
+        public int player2Choice(string name)
         {
-            Console.Write(name, "Please Enter object number:");
-            string player2choice = Console.ReadLine();
+            Console.WriteLine(name, "Enter Number");
+            string player2input = Console.ReadLine();
             int number;
-            if (Int32.TryParse(player2choice, out number))
+            if (Int32.TryParse(player2input, out number))
             {
                 switch (number)
                 {
@@ -39,6 +39,7 @@ namespace rockPaperScissors
                 }
 
             }
+            return number;
         }
     }
 }

@@ -13,33 +13,33 @@ namespace rockPaperScissors
             string name;
         }
 
-        public void player1Choice()
+        public int player1Choice(string name)
         {
-            Console.Write("Enter object number:");
-            string player1choice = Console.ReadLine();
+            Console.WriteLine(name, "Enter Number");
+            string player1input = Console.ReadLine();
             int number;
-            if (Int32.TryParse(player1choice, out number))
+            if (Int32.TryParse(player1input, out number))
             {
                 switch (number)
                 {
                     case 0:
                         Console.WriteLine("Rock");
-                        break;
+                        return number;
                     case 1:
                         Console.WriteLine("Paper");
-                        break;
+                        return number;
                     case 2:
                         Console.WriteLine("Scissors");
-                        break;
+                        return number;
                     case 3:
                         Console.WriteLine("Lizard");
-                        break;
+                        return number;
                     default:
                         Console.WriteLine("Spock");
-                        break;
+                        return number;  
                 }
-
             }
+            return number;
         }
     }
 }
