@@ -8,9 +8,15 @@ namespace rockPaperScissors
 {
     public class UserInput
     {
-        public UserInput()
+        string player1name = Console.ReadLine();
+        string player2name = Console.ReadLine();
+        public string player1()
         {
-           Console.ReadLine();
+            return player1name;
+        }
+        public string player2()
+        {
+            return player2name;
         }
     }
 }

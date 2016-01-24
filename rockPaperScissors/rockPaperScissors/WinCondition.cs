@@ -8,30 +8,67 @@ namespace rockPaperScissors
 {
     class WinCondition
     {
-        public void WinLoss(int player1choice, int player2choice, string name1, string name2)
+        int currentScore1;
+        int currentScore2;
+        int winLoss;
+        public int WinLoss(int player1choice, int player2choice, string name1, string name2, int player1score, int player2score)
         {
-            int winLoss;
+            
             winLoss = (5 + player1choice - player2choice) % 5;
-            switch (winLoss)
+            //switch (winLoss)
+            if (winLoss == 3 || winLoss == 1)
             {
-                case 1:
-                    Console.WriteLine(name1 + " wins!");
-                    break;
-                case 2:
-                    Console.WriteLine(name2 + " wins!");
-                    break;
-                case 3:
-                    Console.WriteLine(name1 + " wins!");
-                    break;
-                case 4:
-                    Console.WriteLine(name2 + " wins!");
-                    break;
-                default:
-                    Console.WriteLine("It's a draw.");
-                    break;
+
+                Console.WriteLine(name1 + " wins!");
+                player1score ++;
+                Console.WriteLine(name1 + "'s current score is " + player1score);
+                return player1score;
+
+                //return player1score;
 
             }
+            else if (winLoss == 4 || winLoss == 2)
+            {
+                 
+                Console.WriteLine(name2 + " wins!");
+                player2score ++;
+                Console.WriteLine(name2 + "'s current score is " + player2score);
+                return player2score;
+                
+                //return player2score;
+            }
+            else
+            {
+                Console.WriteLine("It's a draw!");
+                //return (currentScore1 + currentScore2);
+            }
+            return (player1score + player2score) ;
+            //{
+            //    case 1:
+            //        Console.WriteLine(name1 + " wins!");
+            //        player1score ++;
+            //        Console.WriteLine(name1 + " current score is " + player1score);
+            //        break;
+            //    case 2:
+            //        Console.WriteLine(name2 + " wins!");
+            //        player2score ++; ;
+            //        Console.WriteLine(name2 + " current score is " + player2score);
+            //        break;
+            //    case 3:
+            //        Console.WriteLine(name1 + " wins!");
+            //        player1score++;
+            //        Console.WriteLine(name1 + " current score is " + player1score);
+            //        break;
+            //    case 4:
+            //        Console.WriteLine(name2 + " wins!");
+            //        player2score++;
+            //        Console.WriteLine(name2 + " current score is " + player2score);
+            //        break;
+            //    default:
+            //        Console.WriteLine("It's a draw.");
+            //        break;
 
         }
+
     }
-}
+    }

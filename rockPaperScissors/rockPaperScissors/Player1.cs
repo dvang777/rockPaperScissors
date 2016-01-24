@@ -10,7 +10,6 @@ namespace rockPaperScissors
     {
         public Player1()
         {
-            string name;
         }
 
         public int player1Choice(string name)
@@ -34,7 +33,7 @@ namespace rockPaperScissors
                     case 3:
                         Console.WriteLine("Lizard");
                         return number;
-                    default:
+                    case 4:
                         Console.WriteLine("Spock");
                         return number;  
                 }

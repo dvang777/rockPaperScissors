@@ -8,7 +8,17 @@ namespace rockPaperScissors
 {
     public class Score
     {
-        int player1score = 0;
-        int player2score = 0;
+        public int player1score()
+        {
+            int score1 = 1;
+            return score1;
+            
+        }
+        public int player2score()
+        {
+            int score2 = 1;
+            return score2;
+            
+        }
     }
 }
