@@ -8,6 +8,8 @@ namespace rockPaperScissors
 {
     public class Player1
     {
+        
+
         public Player1()
         {
         }
@@ -22,7 +24,7 @@ namespace rockPaperScissors
                 switch (number)
                 {
                     case 0:
-                        Console.WriteLine("Rock");
+                        Console.WriteLine("rock");
                         return number;
                     case 1:
                         Console.WriteLine("Paper");

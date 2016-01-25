@@ -7,6 +7,7 @@ using System.IO;
 
 namespace rockPaperScissors
 {
+
     public class FileWrite
     {
         TextWriter tw = new StreamWriter("score.txt");

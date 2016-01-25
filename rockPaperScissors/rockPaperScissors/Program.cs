@@ -21,23 +21,41 @@ namespace rockPaperScissors
             Spock spock = new Spock();
             Score score = new Score();
             Computer computer = new Computer();
+            UserInput userInput = new UserInput();
+            //HowManyPlayers howManyPlayers = new HowManyPlayers();
 
             Console.WriteLine("Welcome to Rock Paper Scissors Lizard Spock");
 
+            //howManyPlayers.NumberOfPlayers(userInput.player1name, userInput.player2name, computer.GetRandomInt(0,4));
+
             Console.Write("Enter Player 1 name:");
-            player1input = Console.ReadLine();
+            userInput.player1name = Console.ReadLine();
             Console.Write("Enter Player 2 name:");
-            player2input = Console.ReadLine();
+            userInput.player2name = Console.ReadLine();
             WinCondition winCondition = new WinCondition();
-
             Console.WriteLine("Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, Spock = 4");
-            //couldn't get the scoring to accumulate in the while loop.  tried doing playerscore++ in the wincondition but would only show the first point added.
 
-            while  (score.player1score() < 3 || score.player2score() < 3)
+
+            while (score.score1 < 5 || score.score2 < 5 || score.scoreC < 5)
             {
-                winCondition.WinLoss(player1.player1Choice(player1input), player2.player2Choice(player2input), player1input, player2input, score.player1score(), score.player2score());
+
+                if (score.score1 == 5)
+                {
+                    Console.WriteLine(player1input + " Wins!");
+                    break;
+                }
+                else if (score.score2 == 5)
+                {
+                    Console.WriteLine(player2input + " Wins!");
+                    break;
+                }
+                else
+                {
+                    winCondition.WinLoss(player1.player1Choice(userInput.player1name), player2.player2Choice(userInput.player2name), userInput.player1name, userInput.player2name, ref score.score1, ref score.score2);
+                }
+
             }
-            
+
 
         }
     }

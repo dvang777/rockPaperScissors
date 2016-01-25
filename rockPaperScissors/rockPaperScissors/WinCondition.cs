@@ -8,19 +8,17 @@ namespace rockPaperScissors
 {
     public class WinCondition
     {
-        int currentScore1;
-        int currentScore2;
         int winLoss;
-        public int WinLoss(int player1choice, int computer, string name1, string name2, int player1score, int player2score)
+        public int WinLoss(int player1choice, int player2choice, string name1, string name2, ref int player1score, ref int  player2score)
         {
 
-            winLoss = (5 + player1choice - computer) % 5;
+            winLoss = (5 + player1choice - player2choice) % 5;
             switch (winLoss)
             {
                 case 1:
                     Console.WriteLine(name1 + " wins!");
                     player1score++;
-                    Console.WriteLine(name1 + " current score is " + player1score);
+                    Console.WriteLine(name1 + " current score is " +  player1score);
                     return player1score;
                 case 2:
                     Console.WriteLine(name2 + " wins!");
