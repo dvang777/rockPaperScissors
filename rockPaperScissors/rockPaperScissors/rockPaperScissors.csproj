@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckSelection.cs" />
+    <Compile Include="Computer.cs" />
     <Compile Include="FileRead.cs" />
     <Compile Include="FileWrite.cs" />
     <Compile Include="Lizard.cs" />
